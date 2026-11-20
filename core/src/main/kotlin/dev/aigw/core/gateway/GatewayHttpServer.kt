@@ -2358,7 +2358,7 @@ class GatewayHttpServer(
     private fun log(text: String) = engine.log(text)
 
     companion object {
-        const val MAX_BODY_BYTES = 8 * 1024 * 1024
+        const val MAX_BODY_BYTES = 40 * 1024 * 1024
 
         /** `/v1/credits` 并行拉取的单家预算；上游半挂时不能让请求线程无限等。 */
         private const val CREDITS_FETCH_TIMEOUT_SECONDS = 20L
